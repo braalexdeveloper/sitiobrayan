@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+ 
+    <style>
+    .box {
+        display: inline-block;
+        
+        position: relative;
+    }
+ 
+    /* definimos la capa oculta que se movera por la pantalla al pasar el
+     raton por encima de la capa "box" */
+    .box .hidden {
+        background: red;
+        height: 150px;
+        width: 200px;
+        position: absolute;
+        top: 200px;
+        opacity: 1;
+        -webkit-transition: all 0.7s ease;
+        -moz-transition: all 0.7s ease;
+        -ms-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+        opacity:0.8;
+        /*filter: alpha(opacity=80);*/
+        padding:10px;
+    }
+ 
+    /* definimos la posicion de la capa cuando se pasa por encima de la clase
+     box. Como esta definido que tiene una transicion, realizara el movimeinto
+     hasta la paosicion left=0 */
+    .box:hover .hidden {
+        top: 0px;
+    }
+    </style>
+</head>
+ 
+<body>
+ 
+<div class="box">
+    <img src="http://www.lawebdelprogramador.com/codigo/jquery.preview1/jquery.preview_1.jpg" width="200" height="150">
+    <div class="hidden">Este es el contenido del div que subira de abajo...</div>
+</div>
+<div class="box">
+    <img src="http://www.lawebdelprogramador.com/codigo/jquery.preview1/jquery.preview_1.jpg" width="200" height="150">
+    <div class="hidden">Este es el contenido del div que subira de abajo...</div>
+</div>
+<div class="box">
+    <img src="http://www.lawebdelprogramador.com/codigo/jquery.preview1/jquery.preview_1.jpg" width="200" height="150">
+    <div class="hidden">Este es el contenido del div que subira de abajo...</div>
+</div>
+ 
+</body>
+</html>

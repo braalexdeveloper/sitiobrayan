@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de JavaScript</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <div id="lista1"></div>
+
+<script>
+  window.onload=iniciar;
+
+  function iniciar()
+  {
+    generarLista('lista1','uno','dos','tres','cuatro','cinco','seis');
+  }
+
+  function generarLista()
+  {
+    var s='<ol>';
+    var f;
+    for(f=1;f<arguments.length;f++)
+    {
+      s=s+'<li>'+arguments[f]+'</li>';
+    }
+    s=s+'</ol>';
+    var elemento1=document.getElementById(arguments[0]);
+    elemento1.innerHTML=s;
+  }
+</script>
+  
+</body>
+</html>

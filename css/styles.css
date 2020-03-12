@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ffff;
+    overflow-x: hidden;
+}
+.seccion-flyer{
+    padding:2rem 0;
+    height:auto;
+}
+.titulo-flyer{
+    color:#333131;
+    font-size:3rem;
+    text-align:center;
+    padding-top: 3rem;
+}
+
+/*pagina fotos*/
+.volver-portafolio{
+  text-align: center;
+  margin-top:0.5rem;
+  padding: 0.3rem 0;
+}
+.volver-portafolio a{
+    text-decoration:none;
+    font-size:1.3rem;
+    font-weight: none;
+    color:#0b81c5;
+}
+.volver-portafolio a:hover{
+    color:#333131;
+}
+/*ffff*/
+.gallery-container{
+    width: 80%;
+    margin:50px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(3,300px);
+}
+
+.gallery-container .gallery-card
+{overflow: hidden;
+    margin:0.5rem 0.5rem;
+    border:1px solid #000;
+}
+
+.gallery-container .gallery-card a{
+    width: 100%;
+    height:100%;
+}
+.gallery-container .gallery-card a > img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.gallery-container .gallery-card a > img:hover{
+    transform: scale(1.5) rotate(30deg);
+}
+
+/*fotografia*/
+.seccion-fotografia{
+    padding:2rem 0;
+    height:auto;
+}
+.titulo-flyer{
+    color:#333131;
+    font-size:3rem;
+    text-align:center;
+    padding-top: 3rem;
+}
+.gallery-containerf{
+    width: 80%;
+    margin:50px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(2,300px);
+}
+
+.gallery-containerf .gallery-card
+{overflow: hidden;
+    margin:0.5rem 0.5rem;
+    border:1px solid #000;
+}
+
+.gallery-containerf .gallery-card a{
+    width: 100%;
+    height:100%;
+}
+.gallery-containerf .gallery-card a > img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.gallery-containerf .gallery-card a > img:hover{
+    transform: scale(1.5) rotate(30deg);
+}

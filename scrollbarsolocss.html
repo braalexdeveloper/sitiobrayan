@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>maque10</title>
+	<style>
+.separador{
+   height:500px;
+   background-color: green
+}
+#abc{
+  background:red;
+  height:200px;
+}
+#ddd{
+	background:yellow;
+  height:400px;
+}
+	</style>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	
+
+
+
+<a href="#abc">dfas</a>
+<a href="#ddd">dfas</a>
+<div class="separador"></div>
+<div id="abc"></div>
+<div class="separador"></div>
+<div id="ddd"></div>
+
+    <script>
+
+		$(document).ready(function(){
+  $('a[href^="#"]').click(function(event){
+    //Aquí elimina el evento normal de la etiqueta <a>
+    event.preventDefault();
+    //Aquí cojemos el elmento
+    var elem=$(this).attr("href");
+    $("html, body").animate({
+      scrollTop: $(elem).offset().top
+    },800);
+  });
+});
+	</script>
+
+	
+</body>
+</html>
